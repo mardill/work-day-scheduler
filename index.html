@@ -18,21 +18,44 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
+      <h1 class="display-4">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+
+    <div class="container row">
+            <div class="time-block col-md-2">9am</div>
+            <div class="hour form-group form-inline col-md-8">
+                <input type="text" class="flex-fill"/>
+            </div>
+            <div class="saveBtn col-md-2">
+                <button type="submit" class="col-sm-2">ß</button>
+            </div>
     </div>
+
+
+        <!-- <form class="form-inline col-12">
+            <div class="form-group mb-2">
+              <label for="timeOfDay" class="sr-only"></label>
+              <input type="text" readonly class="form-control-plaintext" id="time" value="time">
+            </div>
+            <div class="form-group  mb-2">
+              <input type="text" class="form-control" id="scheduleItem">
+            </div>
+            <button type="submit" class="saveBtn mb-2">Save</button>
+          </form> -->
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+    <script src="./assets/js/script.js"></script>
+</body>
 </html>
