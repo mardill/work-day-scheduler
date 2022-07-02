@@ -64,7 +64,7 @@ function printTime(){
             var savedSchedule = JSON.parse(localStorage.getItem("input"))
             save1.text(savedSchedule)
         }
-
+        
         showInput()
     }
 
