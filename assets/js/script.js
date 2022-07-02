@@ -6,7 +6,6 @@ var saveBut = $('.saveBtn')
 var rows = $('.row')
 var hour = $(".hourOfDay")
 var input = $(".form-control")
-var allInputs = $( ":input" );
 
 
 // create time for header and current hour
@@ -49,19 +48,22 @@ function printTime(){
             formFill.addClass('future')
         }   
 
-        var toSave = "hello"
+        var save1 = $("#newId0")
+        
+
+        console.log(save1)
 
         function saveInput(){
-            console.log(toSave)
-            localStorage.setItem("input", JSON.stringify(toSave))
-            localStorage.getItem(toSave)
+            console.log(save1Val)
+            var save1Val = save1.val()
+            localStorage.setItem("input", JSON.stringify(save1Val))
         }
          
         newBtn.on("click", saveInput)
 
         function showInput(){
             var savedSchedule = JSON.parse(localStorage.getItem("input"))
-            formFill.text(savedSchedule)
+            save1.text(savedSchedule)
         }
 
         showInput()
