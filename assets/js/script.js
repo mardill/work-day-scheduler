@@ -15,10 +15,10 @@ currentDate.text(today)
 var currentHour = moment().startOf("hour")
 
 // define times to use for rows
-var timesStrings = [9,10,11,12,13,14,15,16,17]
-var slots = ['','','','','','','','']
+var timesArray = [9,10,11,12,13,14,15,16,17]
 
-var times = timesStrings.map(elem => moment(elem, 'h'));
+// transform time array to times using moment
+var times = timesArray.map(elem => moment(elem, 'h'));
 console.log(times);
 
 
@@ -34,7 +34,7 @@ function printTime(){
         // add unique id to every textarea
         var formFill = $('<textarea>').addClass('hour col-md-8').attr("id", "newId"+i)
 
-        var newBtn = $('<button>').addClass('saveBtn col-md-2')
+        var newBtn = $('<button>').addClass('saveBtn col-md-2').text("save")
         
         container.append(newRow)
         newRow.append(newTime, formFill, newBtn)
@@ -48,11 +48,14 @@ function printTime(){
             formFill.addClass('future')
         }   
 
-        var save1 = $("#newId0")
+        // define variable to text area ID's
         
+        var save1 = $("#newId0")
+        var saves = [save1]
+        console.log(saves)
 
-        console.log(save1)
-
+    
+        // save textarea values in local storage and retrieve them to show on refresh
         function saveInput(){
             console.log(save1Val)
             var save1Val = save1.val()
@@ -60,7 +63,7 @@ function printTime(){
         }
          
         newBtn.on("click", saveInput)
-
+        // sets where and which data to display from local storage
         function showInput(){
             var savedSchedule = JSON.parse(localStorage.getItem("input"))
             save1.text(savedSchedule)
@@ -72,38 +75,4 @@ function printTime(){
 }
 
 printTime()
-
-
-
-
-// creates event listener on button to save textarea input to local storage
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // var form = $('<div>').addClass('hour form-group col-md-8')
-        // form.append($('<input>'), {type:"text", id:"input"})
-
-
-
-
-
-
-
-
-//pseudocode
-//create form in  html. save form input in local storage
-//
-
-
 
