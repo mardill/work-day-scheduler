@@ -3,6 +3,8 @@ body {
     font-size: 16px;
     line-height: 1;
   }
+
+
   
   textarea{
     background: transparent;
@@ -28,14 +30,12 @@ body {
   .time-block{
     text-align: center;
     border-radius: 15px;
-    border: 2px solid green
   }
   
   .row {
     white-space: pre-wrap;
     height: 80px;
     border-top: 1px solid white;
-    border: 2px solid pink
 
   }
   
@@ -72,8 +72,3 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
-
-  /* .container{
-      border: 2px solid blue
-  } */
-  
