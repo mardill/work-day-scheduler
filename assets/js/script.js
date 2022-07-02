@@ -32,7 +32,8 @@ function printTime(){
 
         var newTime = $('<div>').addClass('time-block col-md-2').text(times[i].format("h a"))
 
-        var formFill = $('<textarea>').addClass('hour col-md-8')
+        // add unique id to every textarea
+        var formFill = $('<textarea>').addClass('hour col-md-8').attr("id", "newId"+i)
 
         var newBtn = $('<button>').addClass('saveBtn col-md-2')
         
