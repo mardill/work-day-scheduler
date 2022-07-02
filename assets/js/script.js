@@ -49,12 +49,8 @@ function printTime(){
         }   
 
         // define variable to text area ID's
-        
         var save1 = $("#newId0")
-        var saves = [save1]
-        console.log(saves)
 
-    
         // save textarea values in local storage and retrieve them to show on refresh
         function saveInput(){
             console.log(save1Val)
