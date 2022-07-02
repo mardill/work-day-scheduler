@@ -16,7 +16,8 @@ currentDate.text(today)
 var currentHour = moment().startOf("hour")
 
 // define times to use for rows
-var timesStrings = [9,10,11,12,13,14,15,16,17,18,19,20,21]
+var timesStrings = [9,10,11,12,13,14,15,16,17]
+var slots = ['','','','','','','','']
 
 var times = timesStrings.map(elem => moment(elem, 'h'));
 console.log(times);
@@ -46,6 +47,27 @@ function printTime(){
         } else{
             formFill.addClass('future')
         }   
+
+        var toSave = $(".hour").val()
+
+        function saveInput(){
+            console.log("hello")
+            
+            
+            console.log(toSave)
+            localStorage.setItem("input", JSON.stringify(toSave))
+            localStorage.getItem(toSave)
+        }
+         
+        newBtn.on("click", saveInput)
+
+        function showInput(){
+
+            var savedSchedule = localStorage.getItem("input")
+            formFill.text(savedSchedule)
+        }
+
+        showInput()
     }
 
 }
@@ -55,14 +77,8 @@ printTime()
 
 
 
+// creates event listener on button to save textarea input to local storage
 
-function showInput(){
-    console.log(formInput)
-
-}
-
-
-saveBut.on("click", showInput)
 
 
 
