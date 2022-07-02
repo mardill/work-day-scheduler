@@ -4,7 +4,6 @@ var timeOfDay = $(".time-block")
 var scheduleInput = $('.hour')
 var saveBut = $('.saveBtn')
 var rows = $('.row')
-var formInput = $("#input")
 var hour = $(".hourOfDay")
 var input = $(".form-control")
 var allInputs = $( ":input" );
@@ -41,12 +40,12 @@ function printTime(){
 
         // create coloring based on hour of day
         if(times[i].isSame(currentHour)){
-            form.addClass('present')
+            formFill.addClass('present')
         }else if(times[i].isBefore(currentHour)){
-            form.addClass('past')
+            formFill.addClass('past')
         } else{
-        form.addClass('future')
-    }   
+            formFill.addClass('future')
+        }   
     }
 
 }
