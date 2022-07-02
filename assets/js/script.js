@@ -48,12 +48,9 @@ function printTime(){
             formFill.addClass('future')
         }   
 
-        var toSave = $(".hour").val()
+        var toSave = "hello"
 
         function saveInput(){
-            console.log("hello")
-            
-            
             console.log(toSave)
             localStorage.setItem("input", JSON.stringify(toSave))
             localStorage.getItem(toSave)
@@ -62,8 +59,7 @@ function printTime(){
         newBtn.on("click", saveInput)
 
         function showInput(){
-
-            var savedSchedule = localStorage.getItem("input")
+            var savedSchedule = JSON.parse(localStorage.getItem("input"))
             formFill.text(savedSchedule)
         }
 
